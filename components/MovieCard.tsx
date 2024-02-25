@@ -5,6 +5,7 @@ import FavoriteButton from './FavoriteButton'
 import { useRouter } from 'next/router'
 import useInfoModal from '@/hooks/useInfoModal'
 import { MovieInterface } from '@/types';
+import Image from 'next/image'
 
 interface MovieCardProps {
   data: Record<string, any>
@@ -18,7 +19,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
-      <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
+      <Image onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
         cursor-pointer
         object-cover
         transition
@@ -48,7 +49,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:translate-x-[2vw]
         group-hover:opacity-100
       ">
-        <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
+        <Image onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
           cursor-pointer
           object-cover
           transition
