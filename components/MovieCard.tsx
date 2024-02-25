@@ -7,7 +7,7 @@ import useInfoModal from '@/hooks/useInfoModal'
 import { MovieInterface } from '@/types';
 
 interface MovieCardProps {
-  data: MovieInterface;
+  data: Record<string, any>
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
